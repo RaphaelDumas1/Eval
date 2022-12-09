@@ -26,5 +26,17 @@ namespace CalculateurNombreRomain.test
             // Alors on obtient II
             Assert.Equal("II", resultat);
         }
+        [Fact]
+        public void Test3()
+        {
+            // ETANT DONNE une nombre 3
+            int nombre = 3;
+
+            // QUAND on utilise la methode convertir
+            var resultat = CalculateurNombreRomain.Convertir(3);
+
+            // Alors on obtient III
+            Assert.Equal("III", resultat);
+        }
     }
 }
