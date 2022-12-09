@@ -103,8 +103,20 @@ namespace CalculateurNombreRomain.test
             // QUAND on utilise la methode convertir
             var resultat = CalculateurNombreRomain.Convertir(nombre);
 
-            // ALORS on obtient IX
+            // ALORS on obtient X
             Assert.Equal("X", resultat);
+        }
+        [Fact]
+
+        public void Test50()
+        {
+            // ETANT DONNE un nombre 10
+            var nombre = 50;
+            // QUAND on utilise la methode convertir
+            var resultat = CalculateurNombreRomain.Convertir(nombre);
+
+            // ALORS on obtient X
+            Assert.Equal("L", resultat);
         }
     }
 }
