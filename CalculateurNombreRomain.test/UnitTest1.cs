@@ -44,6 +44,7 @@ namespace CalculateurNombreRomain.test
         }
 
         [Theory]
+        [InlineData(5)]
         [InlineData(6)]
         [InlineData(7)]
         [InlineData(8)]
