@@ -6,7 +6,7 @@ namespace CalculateurNombreRomain.test
         [InlineData(1)]
         [InlineData(2)]
         [InlineData(3)]
-        public void Test(int n)
+        public void Test123(int n)
         {
             // ETANT DONNE un nombre compris entre 1 et 3
             var nombre = n;
@@ -17,6 +17,7 @@ namespace CalculateurNombreRomain.test
             var attendu = new string('I', n);
             Assert.Equal(attendu, resultat);
         }
+
         [Fact]
 
         public void Test4()
@@ -42,43 +43,21 @@ namespace CalculateurNombreRomain.test
             Assert.Equal("V", resultat);
         }
 
-        [Fact]
-
-        public void Test6()
+        [Theory]
+        [InlineData(6)]
+        [InlineData(7)]
+        [InlineData(8)]
+        public void Test678(int n)
         {
-            // ETANT DONNE un nombre 6
-            var nombre = 6;
+            // ETANT DONNE un nombre compris entre 6 et 8
+            var nombre = n;
             // QUAND on utilise la methode convertir
             var resultat = CalculateurNombreRomain.Convertir(nombre);
 
-            // ALORS on obtient V
-            Assert.Equal("VI", resultat);
-        }
-
-        [Fact]
-
-        public void Test7()
-        {
-            // ETANT DONNE un nombre 7
-            var nombre = 7;
-            // QUAND on utilise la methode convertir
-            var resultat = CalculateurNombreRomain.Convertir(nombre);
-
-            // ALORS on obtient VII
-            Assert.Equal("VII", resultat);
-        }
-
-        [Fact]
-
-        public void Test8()
-        {
-            // ETANT DONNE un nombre 8
-            var nombre = 8;
-            // QUAND on utilise la methode convertir
-            var resultat = CalculateurNombreRomain.Convertir(nombre);
-
-            // ALORS on obtient VIII
-            Assert.Equal("VIII", resultat);
+            // ALORS on obtient une string composee de V plus n-5 fois I
+            var deuxieme_partie = new string('I', n - 5);
+            var attendu = "V" + deuxieme_partie;
+            Assert.Equal(attendu, resultat);
         }
 
         [Fact]
@@ -105,18 +84,6 @@ namespace CalculateurNombreRomain.test
 
             // ALORS on obtient X
             Assert.Equal("X", resultat);
-        }
-        [Fact]
-
-        public void Test50()
-        {
-            // ETANT DONNE un nombre 10
-            var nombre = 50;
-            // QUAND on utilise la methode convertir
-            var resultat = CalculateurNombreRomain.Convertir(nombre);
-
-            // ALORS on obtient X
-            Assert.Equal("L", resultat);
         }
     }
 }
