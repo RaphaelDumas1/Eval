@@ -8,6 +8,8 @@
             {
                 case 1:
                     return "I";
+                case 2:
+                    return "II";
                 default:
                     return "Erreur";
             }
