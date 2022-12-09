@@ -93,5 +93,18 @@ namespace CalculateurNombreRomain.test
             // ALORS on obtient IX
             Assert.Equal("IX", resultat);
         }
+
+        [Fact]
+
+        public void Test10()
+        {
+            // ETANT DONNE un nombre 10
+            var nombre = 10;
+            // QUAND on utilise la methode convertir
+            var resultat = CalculateurNombreRomain.Convertir(nombre);
+
+            // ALORS on obtient IX
+            Assert.Equal("X", resultat);
+        }
     }
 }

@@ -1,7 +1,8 @@
 ﻿namespace CalculateurNombreRomain
 {
     public class CalculateurNombreRomain
-    {
+    {   
+
         public static  string Convertir(int nombre)
         {
             switch (nombre)
@@ -24,6 +25,8 @@
                     return "VIII";
                 case 9:
                     return "IX";
+                case 10:
+                    return "X";
                 default:
                     return "Erreur";
             }
