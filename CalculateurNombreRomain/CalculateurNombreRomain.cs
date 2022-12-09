@@ -18,6 +18,8 @@
                     return "V";
                 case 6:
                     return "VI";
+                case 7:
+                    return "VII";
                 default:
                     return "Erreur";
             }

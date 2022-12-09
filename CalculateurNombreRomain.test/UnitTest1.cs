@@ -54,5 +54,18 @@ namespace CalculateurNombreRomain.test
             // ALORS on obtient V
             Assert.Equal("VI", resultat);
         }
+
+        [Fact]
+
+        public void Test7()
+        {
+            // ETANT DONNE un nombre 7
+            var nombre = 7;
+            // QUAND on utilise la methode convertir
+            var resultat = CalculateurNombreRomain.Convertir(nombre);
+
+            // ALORS on obtient V
+            Assert.Equal("VII", resultat);
+        }
     }
 }
