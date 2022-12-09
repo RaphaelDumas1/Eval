@@ -1,0 +1,12 @@
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\bin\Debug\net7.0\CalculateurNombreRomain.deps.json
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\bin\Debug\net7.0\CalculateurNombreRomain.dll
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\bin\Debug\net7.0\CalculateurNombreRomain.pdb
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\obj\Debug\net7.0\CalculateurNombreRomain.csproj.AssemblyReference.cache
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\obj\Debug\net7.0\CalculateurNombreRomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\obj\Debug\net7.0\CalculateurNombreRomain.AssemblyInfoInputs.cache
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\obj\Debug\net7.0\CalculateurNombreRomain.AssemblyInfo.cs
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\obj\Debug\net7.0\CalculateurNombreRomain.csproj.CoreCompileInputs.cache
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\obj\Debug\net7.0\CalculateurNombreRomain.dll
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\obj\Debug\net7.0\refint\CalculateurNombreRomain.dll
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\obj\Debug\net7.0\CalculateurNombreRomain.pdb
+C:\Users\Raph\source\repos\CalculateurNombreRomain\CalculateurNombreRomain\obj\Debug\net7.0\ref\CalculateurNombreRomain.dll
