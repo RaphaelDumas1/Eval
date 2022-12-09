@@ -80,5 +80,18 @@ namespace CalculateurNombreRomain.test
             // ALORS on obtient VIII
             Assert.Equal("VIII", resultat);
         }
+
+        [Fact]
+
+        public void Test9()
+        {
+            // ETANT DONNE un nombre 9
+            var nombre = 9;
+            // QUAND on utilise la methode convertir
+            var resultat = CalculateurNombreRomain.Convertir(nombre);
+
+            // ALORS on obtient IX
+            Assert.Equal("IX", resultat);
+        }
     }
 }
