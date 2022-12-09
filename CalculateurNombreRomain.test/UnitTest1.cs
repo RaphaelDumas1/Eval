@@ -1,20 +1,40 @@
 namespace CalculateurNombreRomain.test
 {
+
+
     public class UnitTest1
     {
-        [Theory]
-        [InlineData(1)]
-        [InlineData(2)]
-        [InlineData(3)]
-        public void Test123(int n)
+        public static IEnumerable<(int valeur, string romain)> liste_multiple_cinq  => new[]
+        {   
+            (0, ""),
+            (5, "V"),
+            (10, "X"),
+            (15, "XV"),
+            (20, "XX"),
+            (25, "XXV"),
+            (30, "XXX"),
+        };
+        private static IEnumerable<object[]> multiple_de_cinq_plus_trois()
         {
-            // ETANT DONNE un nombre compris entre 1 et 3
-            var nombre = n;
+            foreach (var (valeur, romain) in liste_multiple_cinq)
+            {
+                yield return new object[] { valeur, valeur, romain };
+                yield return new object[] { valeur, valeur + 1, romain };
+                yield return new object[] { valeur, valeur + 2, romain };
+                yield return new object[] { valeur, valeur + 3, romain };
+            }
+        }
+        public static object[][] cas_multiple_de_cinq_plus_trois=> multiple_de_cinq_plus_trois().ToArray();
+        [Theory]
+        [MemberData(nameof(cas_multiple_de_cinq_plus_trois))]
+        public void Test_multiple_cing_plus_trois(int multiple_de_cinq, int nombre, string romain)
+        {
+            // ETANT DONNE un nombre n multiple de 5 ainsi que les trois nombres qui le suivent
             // QUAND on utilise la methode convertir
             var resultat = CalculateurNombreRomain.Convertir(nombre);
 
-            // ALORS on obtient une string composee de n fois I
-            var attendu = new string('I', n);
+            // ALORS on obtient une string composee du multiple de cing plus n-multipledecinq fois I 
+            var attendu = romain + new string('I', nombre - multiple_de_cinq);
             Assert.Equal(attendu, resultat);
         }
 
@@ -30,36 +50,6 @@ namespace CalculateurNombreRomain.test
             // ALORS on obtient IV
             Assert.Equal("IV", resultat);
         }
-        [Fact]
-
-        public void Test5()
-        {
-            // ETANT DONNE un nombre 5
-            var nombre = 5;
-            // QUAND on utilise la methode convertir
-            var resultat = CalculateurNombreRomain.Convertir(nombre);
-
-            // ALORS on obtient V
-            Assert.Equal("V", resultat);
-        }
-
-        [Theory]
-        [InlineData(5)]
-        [InlineData(6)]
-        [InlineData(7)]
-        [InlineData(8)]
-        public void Test678(int n)
-        {
-            // ETANT DONNE un nombre compris entre 6 et 8
-            var nombre = n;
-            // QUAND on utilise la methode convertir
-            var resultat = CalculateurNombreRomain.Convertir(nombre);
-
-            // ALORS on obtient une string composee de V plus n-5 fois I
-            var deuxieme_partie = new string('I', n - 5);
-            var attendu = "V" + deuxieme_partie;
-            Assert.Equal(attendu, resultat);
-        }
 
         [Fact]
 
@@ -74,17 +64,5 @@ namespace CalculateurNombreRomain.test
             Assert.Equal("IX", resultat);
         }
 
-        [Fact]
-
-        public void Test10()
-        {
-            // ETANT DONNE un nombre 10
-            var nombre = 10;
-            // QUAND on utilise la methode convertir
-            var resultat = CalculateurNombreRomain.Convertir(nombre);
-
-            // ALORS on obtient X
-            Assert.Equal("X", resultat);
-        }
     }
 }
