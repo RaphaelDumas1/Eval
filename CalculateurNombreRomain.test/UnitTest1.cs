@@ -2,41 +2,20 @@ namespace CalculateurNombreRomain.test
 {
     public class UnitTest1
     {
-        [Fact]
-        public void Test1()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        public void Test(int n)
         {
-            // ETANT DONNE une nombre 1
-            int nombre = 1;
-
+            // ETANT DONNE un nombre compris entre 1 et 3
+            var nombre = n;
             // QUAND on utilise la methode convertir
-            var resultat = CalculateurNombreRomain.Convertir(1);
+            var resultat = CalculateurNombreRomain.Convertir(nombre);
 
-            // Alors on obtient I
-            Assert.Equal("I", resultat);
-        }
-        [Fact]
-        public void Test2()
-        {
-            // ETANT DONNE une nombre 2
-            int nombre = 2;
-
-            // QUAND on utilise la methode convertir
-            var resultat = CalculateurNombreRomain.Convertir(2);
-
-            // Alors on obtient II
-            Assert.Equal("II", resultat);
-        }
-        [Fact]
-        public void Test3()
-        {
-            // ETANT DONNE une nombre 3
-            int nombre = 3;
-
-            // QUAND on utilise la methode convertir
-            var resultat = CalculateurNombreRomain.Convertir(3);
-
-            // Alors on obtient III
-            Assert.Equal("III", resultat);
+            // ALORS on obtient une string composee de n fois I
+            var attendu = new string('I', n);
+            Assert.Equal(attendu, resultat);
         }
     }
 }
